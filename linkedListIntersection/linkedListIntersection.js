@@ -34,16 +34,44 @@ function Node(val) {
   obj.next = null;
   return obj;
 }
+function getLength(list) {
+  if (list.next === null) {
+    return 1;
+  } else {
+    return 1 + getLength(list.next);
+  }
+}
 
-function linkedListIntersection(list1, list2) {}
+function linkedListIntersection(list1, list2) {
+  // create a helper function to find the length of both lists
+  let length1 = getLength(list1);
+  let length2 = getLength(list2);
+  // check which list is longer
+  let diff = Math.abs(length1 - length2);
+  let long = length1 > length2 ? list1 : list2;
+  let short = length1 > length2 ? list2 : list1;
+  // iterate over the lists
+  // loop through the longer list
+  // compare the nodes
+  while (short && long) {
+    if (diff > 0) {
+      long = long.next;
+      diff--;
+      continue;
+    }
+    if (long === short) {
+      return long;
+    } else {
+      long = long.next;
+      short = short.next;
+      continue;
+    }
+  }
+  return null;
+}
 
-// create a helper function to find the length of both lists
-// check which list is longer
-// iterate over the lists
-// loop through the longer list
-// compare the nodes
+// Quadratix time complexity ====>
 
-// Quadratix time complexity
 // function linkedListIntersection(list1, list2) {
 //   for (let node1 in list1) {
 //     for (let node2 in list2) {
