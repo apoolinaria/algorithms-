@@ -13,9 +13,18 @@
  * rotatedArraySearch([4, 5, 6, 0, 1, 2, 3], 100) === null
  *
  * Target time complexity: O(log(array.length))
+ *
+ * find the range that we are working with
+    while the end is larger than start
+        set the midpoint
+        check if midpoint is the target
+        if yes return the index
+        if not set up a new range
+            if the start range is smaller than the midpoint === true
+            if the midpoint is larger than target ===  true
+
  */
 
 var rotatedArraySearch = function (rotated, target) {
   // Your code here:
 };
-
