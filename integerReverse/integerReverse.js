@@ -21,7 +21,8 @@ function reverseInteger(number) {
   result += (number % power) / (power / 10);
   // remove the digit from number
   number -= number % power;
-  // update power for the next iteartion 10 at first and then 100 => 1000 => 10000 depending on how big is the initial number
+  // update power for the next iteartion 10 at first and then 100 => 1000 => 10000
+  // depending on how big is the initial number
   power *= 10;
   // return result
   return result;
