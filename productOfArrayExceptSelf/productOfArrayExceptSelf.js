@@ -16,5 +16,15 @@ Input: nums = [-1,1,0,-3,3]
 Output: [0,0,9,0,0]
 */
 var productExceptSelf = function (nums) {
+  let answers = [];
+  for (let i = 0; i < nums.length; i++) {
+    let product = 1;
+    for (let j = 0; j < nums.length; j++) {
+      if (j !== i) {
+        product = product * nums[j];
+      }
+    }
+    answers.push(product);
+  }
   return answers;
 };
