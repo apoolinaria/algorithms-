@@ -15,7 +15,6 @@ var twoSum = function (nums, target) {
     }
     hashMap[nums[i]] = i
   }
-
   return [];
 };
 
