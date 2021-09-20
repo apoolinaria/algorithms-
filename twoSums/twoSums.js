@@ -7,6 +7,20 @@ You can return the answer in any order.
 */
 
 var twoSum = function (nums, target) {
+  let hashMap = {}
+  for (let i = 0; i < nums.length; i++){
+    let difference = (nums[i]-target)
+    if(hashMap[difference] !== undefined){
+      return [hashMap[difference], i]
+    }
+    hashMap[nums[i]] = i
+  }
+
+  return [];
+};
+
+// brute force O(n2)
+/*
   let result = [];
   for (let i = 0; i < nums.length; i++) {
     for (let j = i + 1; j < nums.length; j++) {
@@ -17,4 +31,5 @@ var twoSum = function (nums, target) {
     }
   }
   return result;
-};
+
+/*
