@@ -20,7 +20,9 @@ Output: 23
 */
 
 var maxSubArray = function (nums) {
-  // keep track of the max sum
+  if (nums.length <= 1) {
+    return nums[0];
+  }
   let maxSum = 0;
   let currentSum = nums[0];
   for (let i = 1; i < nums.length; i++) {
@@ -31,9 +33,6 @@ var maxSubArray = function (nums) {
     maxSum = Math.max(currentSum, maxSum);
   }
   return maxSum;
-  // keep track of the current sum
-  //iterate over the array
-  // if the cuurent
 };
 
 // //
