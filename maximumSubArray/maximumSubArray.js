@@ -35,3 +35,16 @@ var maxSubArray = function (nums) {
   //iterate over the array
   // if the cuurent
 };
+
+// //
+// var nums = [-2,1,-3,4,-1,2,1,-5,4]
+// // Output: 6
+// console.log(maxSubArray(nums))
+
+// nums2 = [1]
+// // Output: 1
+// console.log(maxSubArray(nums2))
+
+// nums3 = [5,4,-1,7,8]
+// // Output: 23
+// console.log(maxSubArray(nums3))
