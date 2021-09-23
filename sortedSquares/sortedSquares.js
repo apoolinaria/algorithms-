@@ -1,0 +1,1 @@
+var sortedSquares = function (nums) {};
