@@ -9,7 +9,7 @@ You can return the answer in any order.
 var twoSum = function (nums, target) {
   let hashMap = {}
   for (let i = 0; i < nums.length; i++){
-    let difference = (nums[i]-target)
+    let difference = target-nums[i]
     if(hashMap[difference] !== undefined){
       return [hashMap[difference], i]
     }
