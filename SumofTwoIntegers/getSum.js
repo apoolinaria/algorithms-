@@ -10,4 +10,10 @@ Example 2:
 Input: a = 2, b = 3
 Output: 5
 */
-var getSum = function (a, b) {};
+var getSum = function (a, b) {
+  if (b == 0) {
+    return a;
+  } else {
+    return getSum(a ^ b, (a & b) << 1);
+  }
+};
